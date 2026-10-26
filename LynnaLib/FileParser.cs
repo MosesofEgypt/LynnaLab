@@ -680,8 +680,7 @@ namespace LynnaLib
                     {
                         ifdefDepth++;
                     }
-                    else if ((tokens[0].ToLower() == ".else" || tokens[0].ToLower() == ".elif") &&
-                             failedIfdefDepth == ifdefDepth - 1)
+                    else if (tokens[0].ToLower() == ".else" && failedIfdefDepth == ifdefDepth - 1)
                     {
                         ifdefCondition = true;
                     }
